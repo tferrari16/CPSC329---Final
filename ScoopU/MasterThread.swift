@@ -1,4 +1,6 @@
 //
+// MasterThread will oversee and control all threads contained within the program.
+//
 //  MasterThread.swift
 //  ScoopU
 //

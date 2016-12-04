@@ -1,4 +1,6 @@
 //
+// The DriverClient class is used to represent the "driver" between the client and server.
+//
 //  DriverClient.swift
 //  ScoopU
 //

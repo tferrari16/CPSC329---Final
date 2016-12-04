@@ -1,4 +1,6 @@
 //
+// The Server will help with communication between the clients.
+//
 //  Server.swift
 //  ScoopU
 //

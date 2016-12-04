@@ -1,4 +1,6 @@
 //
+// The RiderClient class is used to represent the "rider" between the client and server.
+//
 //  RiderClient.swift
 //  ScoopU
 //

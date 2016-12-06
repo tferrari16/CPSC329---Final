@@ -9,3 +9,10 @@
 //
 
 import Foundation
+import SocketIO
+
+class Server {
+
+
+    
+}

@@ -9,3 +9,9 @@
 //
 
 import Foundation
+
+class Server {
+
+
+    
+}

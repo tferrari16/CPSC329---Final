@@ -9,10 +9,7 @@
 //
 
 import Foundation
-import SocketIO
-
+import UIKit
 class Server {
-
-
     
 }

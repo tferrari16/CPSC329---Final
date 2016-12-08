@@ -42,6 +42,7 @@
 		6E7D28301DF4D955006F6418 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D282F1DF4D955006F6418 /* Server.swift */; };
 		6E7D28321DF4D98F006F6418 /* DriverClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D28311DF4D98F006F6418 /* DriverClient.swift */; };
 		6E7D28341DF4D99F006F6418 /* RiderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D28331DF4D99F006F6418 /* RiderClient.swift */; };
+		FCEA6BEF632411F5533AFC03 /* libPods-ScoopU.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 053A150A80207B6F2F3D9EAF /* libPods-ScoopU.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		053A150A80207B6F2F3D9EAF /* libPods-ScoopU.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScoopU.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4C241D1DF731DE00211D1C /* SocketAckEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckEmitter.swift; sourceTree = "<group>"; };
 		6E4C241E1DF731DE00211D1C /* SocketAckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckManager.swift; sourceTree = "<group>"; };
 		6E4C241F1DF731DE00211D1C /* SocketAnyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAnyEvent.swift; sourceTree = "<group>"; };
@@ -103,6 +105,8 @@
 		6E7D282F1DF4D955006F6418 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		6E7D28311DF4D98F006F6418 /* DriverClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverClient.swift; sourceTree = "<group>"; };
 		6E7D28331DF4D99F006F6418 /* RiderClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderClient.swift; sourceTree = "<group>"; };
+		92B29B8F50F1ED163948DCD9 /* Pods-ScoopU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoopU.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScoopU/Pods-ScoopU.release.xcconfig"; sourceTree = "<group>"; };
+		ACBA3A6E302356B3E554C4AC /* Pods-ScoopU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoopU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScoopU/Pods-ScoopU.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEA6BEF632411F5533AFC03 /* libPods-ScoopU.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +135,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FF12ED456D17D9357E711AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACBA3A6E302356B3E554C4AC /* Pods-ScoopU.debug.xcconfig */,
+				92B29B8F50F1ED163948DCD9 /* Pods-ScoopU.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6BA0286F08C063CB074C9C54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				053A150A80207B6F2F3D9EAF /* libPods-ScoopU.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6E4C23EA1DF730F300211D1C /* SocketIO */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +199,8 @@
 				6E7D28131DF4D90E006F6418 /* ScoopUTests */,
 				6E7D281E1DF4D90E006F6418 /* ScoopUUITests */,
 				6E7D27FD1DF4D90D006F6418 /* Products */,
+				3FF12ED456D17D9357E711AD /* Pods */,
+				6BA0286F08C063CB074C9C54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E7D28241DF4D90E006F6418 /* Build configuration list for PBXNativeTarget "ScoopU" */;
 			buildPhases = (
+				74FBE141A3DFCDE92431C09F /* [CP] Check Pods Manifest.lock */,
 				6E7D27F81DF4D90D006F6418 /* Sources */,
 				6E7D27F91DF4D90D006F6418 /* Frameworks */,
 				6E7D27FA1DF4D90D006F6418 /* Resources */,
+				F3B9648EEC4761465FF38ECA /* [CP] Embed Pods Frameworks */,
+				11DFEF45F101069B6CA261B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -356,6 +383,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11DFEF45F101069B6CA261B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScoopU/Pods-ScoopU-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74FBE141A3DFCDE92431C09F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F3B9648EEC4761465FF38ECA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScoopU/Pods-ScoopU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E7D27F81DF4D90D006F6418 /* Sources */ = {
@@ -541,6 +616,7 @@
 		};
 		6E7D28251DF4D90E006F6418 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACBA3A6E302356B3E554C4AC /* Pods-ScoopU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 43LBNL7JW8;
@@ -554,6 +630,7 @@
 		};
 		6E7D28261DF4D90E006F6418 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92B29B8F50F1ED163948DCD9 /* Pods-ScoopU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 43LBNL7JW8;

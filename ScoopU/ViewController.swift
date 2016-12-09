@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     //called by the register button - creates an account in the Firebase database
     @IBAction func createAccount(_ sender: Any) {
 
-        FIRAuth.auth()?.createUser(withEmail: email.text!, password: password.text!, completion: {
+        FIRAuth.auth()?.createUser(withEmail: email.text!, password:password.text!, completion: {
             
             user, error in
             
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
                 
                 print("Huzzah!")
                 
-                self.performSegue(withIdentifier: "Driver or Rider", sender: self)
+                self.performSegue(withIdentifier: "login", sender: self)
                 
                 
 

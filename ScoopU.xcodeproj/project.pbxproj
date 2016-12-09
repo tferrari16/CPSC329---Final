@@ -320,7 +320,7 @@
 				TargetAttributes = {
 					6E7D27FB1DF4D90D006F6418 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 43LBNL7JW8;
+						DevelopmentTeam = A6R8L7SZ2W;
 						ProvisioningStyle = Automatic;
 					};
 					6E7D280F1DF4D90E006F6418 = {
@@ -619,10 +619,10 @@
 			baseConfigurationReference = ACBA3A6E302356B3E554C4AC /* Pods-ScoopU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 43LBNL7JW8;
+				DEVELOPMENT_TEAM = A6R8L7SZ2W;
 				INFOPLIST_FILE = ScoopU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ScoopU;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FinalProduct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -633,10 +633,10 @@
 			baseConfigurationReference = 92B29B8F50F1ED163948DCD9 /* Pods-ScoopU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 43LBNL7JW8;
+				DEVELOPMENT_TEAM = A6R8L7SZ2W;
 				INFOPLIST_FILE = ScoopU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ScoopU;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FinalProduct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

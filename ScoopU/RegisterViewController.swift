@@ -9,8 +9,10 @@
 import UIKit
 
 import Firebase
+import FirebaseAuth
 
-class ViewController: UIViewController {
+
+class RegisterViewController: UIViewController {
     
     @IBOutlet var email: UITextField!
     
@@ -19,6 +21,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,22 +30,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     //called by the register button - creates an account in the Firebase database
-    @IBAction func createAccount(_ sender: Any) {
-
+        @IBAction func createAccounts(_ sender: Any) {
+        
         FIRAuth.auth()?.createUser(withEmail: email.text!, password:password.text!, completion: {
-            
             user, error in
             
             //if there was no error, call login
             
             if error != nil {
-     
+                
                 self.login()
- 
                 
             } else {
-
+                
                 //everything went smoothly
                 
                 print("user created")
@@ -49,9 +53,10 @@ class ViewController: UIViewController {
                 self.login()
             }
             
-
+            
         })
 
+        
         
     }
 

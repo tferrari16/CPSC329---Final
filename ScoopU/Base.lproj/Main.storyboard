@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3aW-kg-0IM">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3aW-kg-0IM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="duF-Vs-Bp6">
             <objects>
-                <viewController id="3aW-kg-0IM" sceneMemberID="viewController">
+                <viewController id="3aW-kg-0IM" customClass="ViewController" customModule="ScoopU" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xgS-3P-GOl"/>
                         <viewControllerLayoutGuide type="bottom" id="RWC-AY-LNL"/>
@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="-10" y="-555"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="Ftx-Du-qLM">
             <objects>
-                <viewController id="oNE-03-MLp" sceneMemberID="viewController">
+                <viewController id="oNE-03-MLp" customClass="RegisterViewController" customModule="ScoopU" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iSG-mV-lYi"/>
                         <viewControllerLayoutGuide type="bottom" id="hVo-vm-0Lf"/>
@@ -167,8 +167,7 @@
                                     <color key="titleColor" red="0.19242611530000001" green="0.80706125500000003" blue="0.11168838289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="createAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JSd-qI-k0A"/>
-                                    <segue destination="UrX-8U-VFx" kind="show" id="ViV-eQ-YgG"/>
+                                    <action selector="createAccounts:" destination="oNE-03-MLp" eventType="touchUpInside" id="GNn-Vx-R3I"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter a username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ix8-XA-uiL">
@@ -204,6 +203,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.060231842100000002" green="0.068622484799999994" blue="0.43442010879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="QNg-PB-M8l" id="Y4S-SL-gNN"/>
+                        <outlet property="password" destination="D1F-kP-Z9w" id="Aor-Qb-T3J"/>
+                        <segue destination="UrX-8U-VFx" kind="show" identifier="login" id="Vnw-tO-m57"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiT-Qf-QSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -743,7 +747,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="glB-vx-WFm"/>
+        <segue reference="Vnw-tO-m57"/>
         <segue reference="uVY-7h-ix3"/>
         <segue reference="f6C-Fe-r52"/>
     </inferredMetricsTieBreakers>

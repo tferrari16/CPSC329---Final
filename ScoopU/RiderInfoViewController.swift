@@ -16,34 +16,40 @@ class RiderInfoViewController: UIViewController {
 
     @IBOutlet var location: UITextField!
     
+    
+    
     @IBOutlet var destination: UITextField!
+    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        post()
-
+    
         // Do any additional setup after loading the view.
     }
     
     
+    //posts into the realtime database 
+    @IBAction func createPost(_ sender: Any) {
+        post()
+    }
+    
     func post() {
         
-        //let loc = location
-        //let dest = destination
         
         
+        let loc = location.text
+        let dest = destination.text
         
-        let post : [String : AnyObject] = ["location" : location.text! as AnyObject, "destination" : destination.text! as AnyObject]
+        
+        let post : [String : AnyObject] = ["location" : loc! as AnyObject, "destination" : dest! as AnyObject]
         
         let databaseRef = FIRDatabase.database().reference()
         
         databaseRef.child("Riders").childByAutoId().setValue(post)
         
-        print("Location: " + location.text!)
-        print("Destination: " + destination.text!)
+    
         
         
         
@@ -51,6 +57,7 @@ class RiderInfoViewController: UIViewController {
         
         
     }
+    
     
     
 

@@ -314,6 +314,7 @@
                                             <color key="titleColor" red="0.050207325130000001" green="0.80622571239999996" blue="0.1094152493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="createPost:" destination="fDO-SU-j1a" eventType="touchUpInside" id="yFX-vz-T9r"/>
                                             <segue destination="EEg-ps-8DU" kind="show" id="Axy-8D-Oba"/>
                                         </connections>
                                     </button>
@@ -753,8 +754,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Vnw-tO-m57"/>
-        <segue reference="9aR-Rm-C32"/>
         <segue reference="f6C-Fe-r52"/>
+        <segue reference="glB-vx-WFm"/>
+        <segue reference="9aR-Rm-C32"/>
     </inferredMetricsTieBreakers>
 </document>

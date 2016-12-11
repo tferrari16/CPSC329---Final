@@ -38,12 +38,9 @@
 		6E7D280A1DF4D90E006F6418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7D28081DF4D90E006F6418 /* LaunchScreen.storyboard */; };
 		6E7D28151DF4D90E006F6418 /* ScoopUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D28141DF4D90E006F6418 /* ScoopUTests.swift */; };
 		6E7D28201DF4D90E006F6418 /* ScoopUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D281F1DF4D90E006F6418 /* ScoopUUITests.swift */; };
-		6E7D282E1DF4D945006F6418 /* MasterThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D282D1DF4D945006F6418 /* MasterThread.swift */; };
-		6E7D28301DF4D955006F6418 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D282F1DF4D955006F6418 /* Server.swift */; };
-		6E7D28321DF4D98F006F6418 /* DriverClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D28311DF4D98F006F6418 /* DriverClient.swift */; };
-		6E7D28341DF4D99F006F6418 /* RiderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D28331DF4D99F006F6418 /* RiderClient.swift */; };
 		888B40EC1DFCA0D3003E5DEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 888B40EB1DFCA0D3003E5DEE /* GoogleService-Info.plist */; };
 		888B40EE1DFCA32D003E5DEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B40ED1DFCA32D003E5DEE /* LoginViewController.swift */; };
+		888B40F01DFCA513003E5DEE /* RiderInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B40EF1DFCA513003E5DEE /* RiderInfoViewController.swift */; };
 		FCEA6BEF632411F5533AFC03 /* libPods-ScoopU.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 053A150A80207B6F2F3D9EAF /* libPods-ScoopU.a */; };
 /* End PBXBuildFile section */
 
@@ -103,13 +100,10 @@
 		6E7D281B1DF4D90E006F6418 /* ScoopUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoopUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7D281F1DF4D90E006F6418 /* ScoopUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopUUITests.swift; sourceTree = "<group>"; };
 		6E7D28211DF4D90E006F6418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E7D282D1DF4D945006F6418 /* MasterThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterThread.swift; sourceTree = "<group>"; };
-		6E7D282F1DF4D955006F6418 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
-		6E7D28311DF4D98F006F6418 /* DriverClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverClient.swift; sourceTree = "<group>"; };
-		6E7D28331DF4D99F006F6418 /* RiderClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderClient.swift; sourceTree = "<group>"; };
 		888B40EA1DFC9CAC003E5DEE /* ScoopU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScoopU.entitlements; sourceTree = "<group>"; };
 		888B40EB1DFCA0D3003E5DEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		888B40ED1DFCA32D003E5DEE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		888B40EF1DFCA513003E5DEE /* RiderInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderInfoViewController.swift; sourceTree = "<group>"; };
 		92B29B8F50F1ED163948DCD9 /* Pods-ScoopU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoopU.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScoopU/Pods-ScoopU.release.xcconfig"; sourceTree = "<group>"; };
 		ACBA3A6E302356B3E554C4AC /* Pods-ScoopU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoopU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScoopU/Pods-ScoopU.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,15 +220,12 @@
 				6E7D27FF1DF4D90D006F6418 /* AppDelegate.swift */,
 				6E7D28011DF4D90D006F6418 /* RegisterViewController.swift */,
 				888B40ED1DFCA32D003E5DEE /* LoginViewController.swift */,
+				888B40EF1DFCA513003E5DEE /* RiderInfoViewController.swift */,
 				6E7D28031DF4D90D006F6418 /* Main.storyboard */,
 				6E7D28061DF4D90D006F6418 /* Assets.xcassets */,
 				6E7D28081DF4D90E006F6418 /* LaunchScreen.storyboard */,
 				6E7D280B1DF4D90E006F6418 /* Info.plist */,
 				888B40EB1DFCA0D3003E5DEE /* GoogleService-Info.plist */,
-				6E7D282D1DF4D945006F6418 /* MasterThread.swift */,
-				6E7D282F1DF4D955006F6418 /* Server.swift */,
-				6E7D28311DF4D98F006F6418 /* DriverClient.swift */,
-				6E7D28331DF4D99F006F6418 /* RiderClient.swift */,
 			);
 			path = ScoopU;
 			sourceTree = "<group>";
@@ -455,16 +446,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E4C24441DF731DE00211D1C /* SocketIOClientSpec.swift in Sources */,
-				6E7D282E1DF4D945006F6418 /* MasterThread.swift in Sources */,
 				6E4C243A1DF731DE00211D1C /* SocketEngineClient.swift in Sources */,
 				6E4C244B1DF731DE00211D1C /* SSLSecurity.swift in Sources */,
 				6E4C24391DF731DE00211D1C /* SocketEngine.swift in Sources */,
 				6E4C24431DF731DE00211D1C /* SocketIOClientOption.swift in Sources */,
 				6E4C243D1DF731DE00211D1C /* SocketEngineSpec.swift in Sources */,
-				6E7D28341DF4D99F006F6418 /* RiderClient.swift in Sources */,
 				6E4C24371DF731DE00211D1C /* SocketAnyEvent.swift in Sources */,
 				6E7D28021DF4D90D006F6418 /* RegisterViewController.swift in Sources */,
-				6E7D28301DF4D955006F6418 /* Server.swift in Sources */,
 				6E4C24381DF731DE00211D1C /* SocketClientManager.swift in Sources */,
 				6E4C24361DF731DE00211D1C /* SocketAckManager.swift in Sources */,
 				888B40EE1DFCA32D003E5DEE /* LoginViewController.swift in Sources */,
@@ -479,11 +467,11 @@
 				6E4C243F1DF731DE00211D1C /* SocketEventHandler.swift in Sources */,
 				6E4C243E1DF731DE00211D1C /* SocketEngineWebsocket.swift in Sources */,
 				6E4C24401DF731DE00211D1C /* SocketExtensions.swift in Sources */,
+				888B40F01DFCA513003E5DEE /* RiderInfoViewController.swift in Sources */,
 				6E4C243C1DF731DE00211D1C /* SocketEnginePollable.swift in Sources */,
 				6E4C24421DF731DE00211D1C /* SocketIOClientConfiguration.swift in Sources */,
 				6E4C24481DF731DE00211D1C /* SocketParsable.swift in Sources */,
 				6E4C24411DF731DE00211D1C /* SocketIOClient.swift in Sources */,
-				6E7D28321DF4D98F006F6418 /* DriverClient.swift in Sources */,
 				6E7D28001DF4D90D006F6418 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,6 +545,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -607,6 +596,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

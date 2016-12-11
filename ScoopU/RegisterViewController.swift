@@ -59,12 +59,6 @@ class RegisterViewController: UIViewController {
         
         
     }
-
-    //function called when log In button is pressed
-    
-    @IBAction func logInUser(_ sender: Any) {
-         self.login()
-    }
    
     
     //function that is called when the user logs in - if the email/password is incorrect, print error

@@ -281,10 +281,10 @@
             </objects>
             <point key="canvasLocation" x="798" y="-217"/>
         </scene>
-        <!--View Controller-->
+        <!--Rider Info View Controller-->
         <scene sceneID="nrp-l6-R79">
             <objects>
-                <viewController id="fDO-SU-j1a" sceneMemberID="viewController">
+                <viewController id="fDO-SU-j1a" customClass="RiderInfoViewController" customModule="ScoopU" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qkt-3v-aY8"/>
                         <viewControllerLayoutGuide type="bottom" id="MeD-Yd-zqN"/>
@@ -317,7 +317,7 @@
                                             <segue destination="EEg-ps-8DU" kind="show" id="Axy-8D-Oba"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="93Y-iq-sl5">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="93Y-iq-sl5" userLabel="location">
                                         <rect key="frame" x="53" y="221" width="268" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -325,7 +325,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pGE-U0-jMh">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pGE-U0-jMh" userLabel="destination">
                                         <rect key="frame" x="53" y="371" width="268" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -353,6 +353,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="destination" destination="pGE-U0-jMh" id="bMq-FC-35S"/>
+                        <outlet property="location" destination="93Y-iq-sl5" id="Y4S-ta-Xov"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cR2-gd-YPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -749,8 +753,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="glB-vx-WFm"/>
-        <segue reference="uVY-7h-ix3"/>
+        <segue reference="Vnw-tO-m57"/>
+        <segue reference="9aR-Rm-C32"/>
         <segue reference="f6C-Fe-r52"/>
     </inferredMetricsTieBreakers>
 </document>

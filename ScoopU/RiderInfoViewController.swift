@@ -9,22 +9,30 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 
 
 
 class RiderInfoViewController: UIViewController {
+    
 
     @IBOutlet var location: UITextField!
     
-    
-    
     @IBOutlet var destination: UITextField!
+    
+    var count: Int = 0
+    
+    
+    
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
     
         // Do any additional setup after loading the view.
     }
@@ -36,9 +44,7 @@ class RiderInfoViewController: UIViewController {
     }
     
     func post() {
-        
-        
-        
+     
         let loc = location.text
         let dest = destination.text
         
@@ -47,7 +53,20 @@ class RiderInfoViewController: UIViewController {
         
         let databaseRef = FIRDatabase.database().reference()
         
-        databaseRef.child("Riders").childByAutoId().setValue(post)
+        //saves current user ID
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        
+        databaseRef.child("Riders").child(userID!).setValue(post)
+        
+        
+
+       
+        
+        
+        
+        
+        
+        
         
     
         

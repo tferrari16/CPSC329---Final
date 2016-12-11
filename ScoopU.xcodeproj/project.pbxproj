@@ -41,6 +41,7 @@
 		888B40EC1DFCA0D3003E5DEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 888B40EB1DFCA0D3003E5DEE /* GoogleService-Info.plist */; };
 		888B40EE1DFCA32D003E5DEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B40ED1DFCA32D003E5DEE /* LoginViewController.swift */; };
 		888B40F01DFCA513003E5DEE /* RiderInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B40EF1DFCA513003E5DEE /* RiderInfoViewController.swift */; };
+		8897DC391DFDFC4700A2AB48 /* CarInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897DC381DFDFC4700A2AB48 /* CarInfoViewController.swift */; };
 		FCEA6BEF632411F5533AFC03 /* libPods-ScoopU.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 053A150A80207B6F2F3D9EAF /* libPods-ScoopU.a */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		888B40EB1DFCA0D3003E5DEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		888B40ED1DFCA32D003E5DEE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		888B40EF1DFCA513003E5DEE /* RiderInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderInfoViewController.swift; sourceTree = "<group>"; };
+		8897DC381DFDFC4700A2AB48 /* CarInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarInfoViewController.swift; sourceTree = "<group>"; };
 		92B29B8F50F1ED163948DCD9 /* Pods-ScoopU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoopU.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScoopU/Pods-ScoopU.release.xcconfig"; sourceTree = "<group>"; };
 		ACBA3A6E302356B3E554C4AC /* Pods-ScoopU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoopU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScoopU/Pods-ScoopU.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +223,7 @@
 				6E7D28011DF4D90D006F6418 /* RegisterViewController.swift */,
 				888B40ED1DFCA32D003E5DEE /* LoginViewController.swift */,
 				888B40EF1DFCA513003E5DEE /* RiderInfoViewController.swift */,
+				8897DC381DFDFC4700A2AB48 /* CarInfoViewController.swift */,
 				6E7D28031DF4D90D006F6418 /* Main.storyboard */,
 				6E7D28061DF4D90D006F6418 /* Assets.xcassets */,
 				6E7D28081DF4D90E006F6418 /* LaunchScreen.storyboard */,
@@ -468,6 +471,7 @@
 				6E4C243E1DF731DE00211D1C /* SocketEngineWebsocket.swift in Sources */,
 				6E4C24401DF731DE00211D1C /* SocketExtensions.swift in Sources */,
 				888B40F01DFCA513003E5DEE /* RiderInfoViewController.swift in Sources */,
+				8897DC391DFDFC4700A2AB48 /* CarInfoViewController.swift in Sources */,
 				6E4C243C1DF731DE00211D1C /* SocketEnginePollable.swift in Sources */,
 				6E4C24421DF731DE00211D1C /* SocketIOClientConfiguration.swift in Sources */,
 				6E4C24481DF731DE00211D1C /* SocketParsable.swift in Sources */,

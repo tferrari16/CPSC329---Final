@@ -19,15 +19,7 @@ class RiderInfoViewController: UIViewController {
     @IBOutlet var location: UITextField!
     
     @IBOutlet var destination: UITextField!
-    
-    var count: Int = 0
-    
-    
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,23 +49,7 @@ class RiderInfoViewController: UIViewController {
         let userID = FIRAuth.auth()?.currentUser?.uid
         
         databaseRef.child("Riders").child(userID!).setValue(post)
-        
-        
-
-       
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
+   
         
     }
     

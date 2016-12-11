@@ -515,10 +515,10 @@
             </objects>
             <point key="canvasLocation" x="3417" y="237"/>
         </scene>
-        <!--View Controller-->
+        <!--Car Info View Controller-->
         <scene sceneID="bd4-T0-fIg">
             <objects>
-                <viewController id="lgd-gL-voH" sceneMemberID="viewController">
+                <viewController id="lgd-gL-voH" userLabel="Car Info View Controller" customClass="CarInfoViewController" customModule="ScoopU" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="faE-kP-U8n"/>
                         <viewControllerLayoutGuide type="bottom" id="Hfm-2r-FLP"/>
@@ -600,6 +600,7 @@
                                             <color key="titleColor" red="0.050207325130000001" green="0.80622571239999996" blue="0.1094152493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="sendCarInfo:" destination="lgd-gL-voH" eventType="touchUpInside" id="2V0-sI-cNr"/>
                                             <segue destination="WZC-Ae-1ZO" kind="show" id="5Tv-jR-Mjl"/>
                                         </connections>
                                     </button>
@@ -609,6 +610,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="makeAndModel" destination="YDJ-C7-WVC" id="gAc-Eb-X3b"/>
+                        <outlet property="plateNumber" destination="7mW-tl-8Rf" id="9HO-70-Md1"/>
+                        <outlet property="year" destination="uvC-P3-pfm" id="FiM-tC-5IR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CoJ-w2-0OG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -754,8 +760,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="f6C-Fe-r52"/>
-        <segue reference="glB-vx-WFm"/>
+        <segue reference="5Tv-jR-Mjl"/>
+        <segue reference="Vnw-tO-m57"/>
         <segue reference="9aR-Rm-C32"/>
     </inferredMetricsTieBreakers>
 </document>

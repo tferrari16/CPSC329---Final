@@ -22,6 +22,10 @@ class CarInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
     }
@@ -59,10 +63,13 @@ class CarInfoViewController: UIViewController {
             databaseRef.child("Car Information").child(userID!).setValue(post)
             
             
+            
         }
 
-        
-        
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     }
     
     

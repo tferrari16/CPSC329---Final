@@ -17,9 +17,19 @@ class RegisterViewController: UIViewController {
     @IBOutlet var email: UITextField!
     
     @IBOutlet var password: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+       // let swipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action:
+       // "swipeLeft")
+        
+        // view.addGestureRecognizer(swipe)
+        
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view, typically from a nib.
         
         
@@ -75,7 +85,7 @@ class RegisterViewController: UIViewController {
                 
             } else {
                 
-                print("Huzzah!")
+               
                 
                 self.performSegue(withIdentifier: "login", sender: self)
                 
@@ -90,6 +100,15 @@ class RegisterViewController: UIViewController {
         
         
         
+    }
+    
+    //func swipeLeft() {
+        
+        
+    //}
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     

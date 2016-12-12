@@ -19,11 +19,15 @@ class RiderInfoViewController: UIViewController {
     @IBOutlet var location: UITextField!
     
     @IBOutlet var destination: UITextField!
+    
+    @IBOutlet weak var name: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         
+        view.addGestureRecognizer(tap)
         
     
         // Do any additional setup after loading the view.
@@ -39,9 +43,10 @@ class RiderInfoViewController: UIViewController {
      
         let loc = location.text
         let dest = destination.text
+        let nam = name.text
         
         
-        let post : [String : AnyObject] = ["location" : loc! as AnyObject, "destination" : dest! as AnyObject]
+        let post : [String : AnyObject] = ["location" : loc! as AnyObject, "destination" : dest! as AnyObject, "name" : nam! as AnyObject]
         
         let databaseRef = FIRDatabase.database().reference()
         
@@ -63,7 +68,9 @@ class RiderInfoViewController: UIViewController {
     
     
     
-    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     
 

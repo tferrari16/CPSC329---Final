@@ -12,7 +12,7 @@ import Firebase
 import FirebaseAuth
 
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var email: UITextField!
     
@@ -21,13 +21,11 @@ class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         
-       // let swipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action:
-       // "swipeLeft")
-        
-        // view.addGestureRecognizer(swipe)
+      
         
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view, typically from a nib.
@@ -102,20 +100,23 @@ class RegisterViewController: UIViewController {
         
     }
     
-    //func swipeLeft() {
-        
-        
-    //}
+    -(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [email resignFirstResponder];
+    return YES;
+    }
+    
+  //  func textFieldShouldReturn->(UITextField, *);textField {
+    //    if (textField == email) {
+      //      [email, resignFirstResponder];
+        //    [password, becomeFirstResponder];
+       // }
+        //else if(textField == password){
+          //  [descriptionField, resignFirstResponder];
+        //}
+        //return YES;
+   // }
     
     func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }

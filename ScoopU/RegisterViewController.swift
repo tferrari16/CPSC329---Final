@@ -14,7 +14,7 @@ import FirebaseAuth
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var email: UITextField!
+    @IBOutlet var email: UITextField! = nil
     
     @IBOutlet var password: UITextField!
     
@@ -22,6 +22,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        email.delegate = self
+        password.delegate = self
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         
@@ -100,21 +102,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    -(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [email resignFirstResponder];
-    return YES;
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+       email .resignFirstResponder()
+        return true;
     }
-    
-  //  func textFieldShouldReturn->(UITextField, *);textField {
-    //    if (textField == email) {
-      //      [email, resignFirstResponder];
-        //    [password, becomeFirstResponder];
-       // }
-        //else if(textField == password){
-          //  [descriptionField, resignFirstResponder];
-        //}
-        //return YES;
-   // }
     
     func dismissKeyboard() {
         view.endEditing(true)

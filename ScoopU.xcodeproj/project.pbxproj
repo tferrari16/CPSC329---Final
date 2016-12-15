@@ -38,7 +38,6 @@
 		6E7D28021DF4D90D006F6418 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D28011DF4D90D006F6418 /* RegisterViewController.swift */; };
 		6E7D28051DF4D90D006F6418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7D28031DF4D90D006F6418 /* Main.storyboard */; };
 		6E7D28071DF4D90D006F6418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E7D28061DF4D90D006F6418 /* Assets.xcassets */; };
-		6E7D280A1DF4D90E006F6418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7D28081DF4D90E006F6418 /* LaunchScreen.storyboard */; };
 		6E7D28151DF4D90E006F6418 /* ScoopUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D28141DF4D90E006F6418 /* ScoopUTests.swift */; };
 		6E7D28201DF4D90E006F6418 /* ScoopUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7D281F1DF4D90E006F6418 /* ScoopUUITests.swift */; };
 		888B40EC1DFCA0D3003E5DEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 888B40EB1DFCA0D3003E5DEE /* GoogleService-Info.plist */; };
@@ -99,7 +98,6 @@
 		6E7D28011DF4D90D006F6418 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6E7D28041DF4D90D006F6418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E7D28061DF4D90D006F6418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6E7D28091DF4D90E006F6418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E7D280B1DF4D90E006F6418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E7D28101DF4D90E006F6418 /* ScoopUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoopUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7D28141DF4D90E006F6418 /* ScoopUTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopUTests.swift; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 				6E78BC891E01BDBE00985E19 /* DriverInfoViewController.swift */,
 				6E7D28031DF4D90D006F6418 /* Main.storyboard */,
 				6E7D28061DF4D90D006F6418 /* Assets.xcassets */,
-				6E7D28081DF4D90E006F6418 /* LaunchScreen.storyboard */,
 				6E7D280B1DF4D90E006F6418 /* Info.plist */,
 				888B40EB1DFCA0D3003E5DEE /* GoogleService-Info.plist */,
 			);
@@ -382,7 +379,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				888B40EC1DFCA0D3003E5DEE /* GoogleService-Info.plist in Resources */,
-				6E7D280A1DF4D90E006F6418 /* LaunchScreen.storyboard in Resources */,
 				6E7D28071DF4D90D006F6418 /* Assets.xcassets in Resources */,
 				6E7D28051DF4D90D006F6418 /* Main.storyboard in Resources */,
 			);
@@ -532,14 +528,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6E7D28081DF4D90E006F6418 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E7D28091DF4D90E006F6418 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -647,7 +635,7 @@
 				DEVELOPMENT_TEAM = 43LBNL7JW8;
 				INFOPLIST_FILE = ScoopU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ScoopU;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScoopUUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -662,7 +650,7 @@
 				DEVELOPMENT_TEAM = 43LBNL7JW8;
 				INFOPLIST_FILE = ScoopU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ScoopU;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScoopUUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

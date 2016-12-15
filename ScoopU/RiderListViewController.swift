@@ -1,9 +1,13 @@
 //
 //  RiderListViewController.swift
-//  
+//  ScoopU
 //
-//  Created by Taylor Ferrari on 12/14/16.
+//  Allows the rider in input their information.  Once the information is inputted and the send
+//  button is pressed it will store the information into the database and they will become an
+//  official rider.
 //
+//  Created by Miles Singer, Taylor Ferrari, Krista Anken and Sam Ash on 12/10/16.
+//  Copyright © 2016 ScoopU. All rights reserved.
 //
 
 import UIKit
@@ -11,12 +15,14 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 
+// Creates a Rider structure
 struct Rider {
     let locations : String!
     let destinations : String!
     let names : String!
 }
 
+// Creates a Pick structure
 struct Pick {
     let Pnames : String!
     let Plocation : String!
@@ -25,11 +31,12 @@ struct Pick {
 
 class RiderListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    @IBOutlet var selectRider: UIButton!
+    // tableView, picker and selectRider - used for a driver to select a rider
     
     @IBOutlet var tableView: UITableView!
-   
     @IBOutlet var picker: UIPickerView!
+    
+    @IBOutlet var selectRider: UIButton!
     
     //array of struct Pick, which has the name of the user, and the userID
     var pickerData : [Pick] = [Pick]()
@@ -38,6 +45,8 @@ class RiderListViewController: UIViewController, UITableViewDataSource, UITableV
     var riders = [Rider]()
     
     
+    // when this view is called this function is called, like a constructor
+    // it initializes the view controller
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,29 +76,21 @@ class RiderListViewController: UIViewController, UITableViewDataSource, UITableV
             
             
             self.tableView.reloadData()
-            
-            
-            
-            
-            
         })
-        
     }
     
-
-
-
+    // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    //flexible number of cells in table (number of riders in database)
+    // Flexible number of cells in table (number of riders in database)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return riders.count
         
     }
     
+    // Contains the labels that will be in every single cell.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -108,27 +109,26 @@ class RiderListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     
+    // Represents the number of components
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    
-    
+    // Generates the number of components in the picker.
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData.count
     }
     
-    //The data to return for the row and component (column) that's being passed in
+    // The data to return for the row and component (column) that's being passed in.
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row].Pnames
         
     }
     
     // Catpure the picker view selection
+    // This method is triggered whenever the user makes a change to the picker selection.
+    // The parameter named row and component represents what was selected.
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // This method is triggered whenever the user makes a change to the picker selection.
-        // The parameter named row and component represents what was selected.
-        
         
         let userID = FIRAuth.auth()?.currentUser?.uid
         
@@ -143,34 +143,11 @@ class RiderListViewController: UIViewController, UITableViewDataSource, UITableV
         let databaseRef = FIRDatabase.database().reference()
         
         databaseRef.child("Active Ride").child(userID!).setValue(riderScoop)
-        
     }
     
     
     @IBAction func selectRiderPressed(_ sender: Any) {
+        
+        
     }
-    
-    
-    //    //tells which cell is selected
-    //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //
-    //        //let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    //
-    //        let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //    }
-    
-    
-    
-
-
-
-
 }

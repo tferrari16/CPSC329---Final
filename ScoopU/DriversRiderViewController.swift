@@ -2,6 +2,9 @@
 //  DriversRiderViewController.swift
 //  ScoopU
 //
+//  Allows the driver to access the database and see the riders information.  When the driver
+//  clicks the here button the rider will be notified the driver is here.
+//
 //  Created by Taylor Ferrari on 12/14/16.
 //  Copyright © 2016 ScoopU. All rights reserved.
 //
@@ -11,6 +14,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
+// Creates a rider structure
 struct Riders {
     let locations : String!
     let destinations : String!
@@ -18,20 +22,24 @@ struct Riders {
 }
 
 class DriversRiderViewController: UIViewController {
-
+    
+    // riderName, riderLocation and riderDestination - labels with rider information
+    
     @IBOutlet weak var riderName: UILabel!
     @IBOutlet weak var riderLocation: UILabel!
     @IBOutlet weak var riderDestination: UILabel!
-
+    
+    
+    @IBOutlet var hereButton: UIButton!
+    
     var riderArray = [Riders]()
     
-    
+    // when this view is called this function is called, like a constructor
+    // it initializes the view controller
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let databaseRef = FIRDatabase.database().reference()
-        
         
         //saves current user ID
         let userID = FIRAuth.auth()?.currentUser?.uid
@@ -56,20 +64,23 @@ class DriversRiderViewController: UIViewController {
             label3?.text = self.riderArray[0].destinations
             
         })
-        
     }
     
+    // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
+    // Store information in the database when the here button is pressed.
+    @IBAction func hereButtonPressed(_ sender: Any) {
+        
+        let databaseRef = FIRDatabase.database().reference()
+        
+        
+        let currentDriver = FIRAuth.auth()?.currentUser?.uid
+        
+        databaseRef.child("Active Ride").child(currentDriver!).removeValue()
+        databaseRef.child("Rider").child("p8D1Aae61VQ3hQaQedRqMCiepSm1").removeValue()
+        
+    }
 }

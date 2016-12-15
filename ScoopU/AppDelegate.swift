@@ -2,6 +2,8 @@
 //  AppDelegate.swift
 //  ScoopU
 //
+//  Runs the app ScoopU.
+//
 //  Created by Taylor Ferrari on 12/4/16.
 //  Copyright © 2016 ScoopU. All rights reserved.
 //
@@ -19,12 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-    
         FIRApp.configure()
-        
-        
-        
         return true
     }
 

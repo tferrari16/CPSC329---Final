@@ -2,6 +2,9 @@
 //  DriverInfoViewController.swift
 //  ScoopU
 //
+//  Allows the rider to see the drivers information when the driver selects that rider.
+//  A label will appear when the driver presses the here button.
+//
 //  Created by Taylor Ferrari on 12/14/16.
 //  Copyright © 2016 ScoopU. All rights reserved.
 //
@@ -11,6 +14,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
+// Creates a driver structure
 struct Driver {
     let names : String!
     let cars : String!
@@ -25,17 +29,22 @@ class DriverInfoViewController: UIViewController {
     @IBOutlet var carType: UILabel!
     
     @IBOutlet var plateNumber: UILabel!
+    
+    @IBOutlet var driverIsHere: UILabel!
+    
+    // driverName, carTyoe, plateNumber and driverIsHere - labels that will allow
+    // the rider to see the information about the driver
+    
+    // driverArray - all of the drivers
     var driverArray = [Driver]()
     
     
-    
+    // when this view is called this function is called, like a constructor
+    // it initializes the view controller
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         let databaseRef = FIRDatabase.database().reference()
-        
         
         //saves current user ID
         let userID = FIRAuth.auth()?.currentUser?.uid
@@ -53,11 +62,9 @@ class DriverInfoViewController: UIViewController {
                 
                 if(snapshot.key == driverID) {
                     
-                    print("I'm in the IF statement!!")
-                    
                     let car = snapshot.childSnapshot(forPath: "Make and Model").value as! String
                     let plate = snapshot.childSnapshot(forPath: "Plate Number").value as! String
-                    let name = snapshot.childSnapshot(forPath: "Year").value as! String
+                    let name = snapshot.childSnapshot(forPath: "Name").value as! String
                     
                     self.driverArray.insert(Driver(names:  name, cars: car, licenses : plate), at: 0)
                     
@@ -73,37 +80,13 @@ class DriverInfoViewController: UIViewController {
                     print(self.driverArray)
                     
                 }
-                
             })
-            
         })
-        print(" :( ")
-        
-        
-        
-        
-        
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    // Dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    
-    
 }
